@@ -1,3 +1,5 @@
+MEDICAL DIAGNOSIS BAYESIAN NETWORK
+
 Given a Graph file (alarm.bif) the startup code runs to create a network with all nodes, their parents and children.  We read the data file (records.dat) into a vector of vectors. All input is read each vector at a time. First the missing data is imputed for that vector (a line) and then all the corresponding value of counter for each relevant counters is updated. Imputation is done by passing the counts of the required vector, the start and number of values to be tried (only those considered where given values are satisfied). This is continued till time runs out in which in our case is set to be 500 seconds (safety margin from 10 minutes) (Convergence happens in less than a minute). Then the counts are converted into probability by dividing by the total according to the given values to get the required probability.
 Features:
 1.	Smoothing with 0.1 frequency added to each counter (experimentally best score).
